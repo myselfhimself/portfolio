@@ -5,6 +5,7 @@ require(`dotenv`).config({
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
+  pathPrefix: "/portfolio",
   siteMetadata: {
     siteTitleAlt: `Emilia - Gatsby Starter Portfolio`,
   },
