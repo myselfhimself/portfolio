@@ -7,13 +7,19 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 module.exports = {
   pathPrefix: "/portfolio",
   siteMetadata: {
-    siteTitleAlt: `Emilia - Gatsby Starter Portfolio`,
+    siteTitleAlt: `Jonathan-David Schröder - Portfolio`,
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-emilia`,
       // See the theme's README for all available options
-      options: {},
+      options: {
+	name: "Jonathan-David Schröder",
+	location: "France",
+	socialMedia: [{ title: `Github`, href: `https://github.com/myselfhimself` }, { title: `Instagram`, href: `https://www.instagram.com/labonneimpressionfr/` }],
+	showThemeAuthor: false,
+	allRightsReservedText: "Tous droits réservés."
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
