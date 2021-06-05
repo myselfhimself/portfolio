@@ -8,6 +8,13 @@ module.exports = {
   pathPrefix: "/portfolio",
   siteMetadata: {
     siteTitleAlt: `Jonathan-David Schröder - Portfolio`,
+    siteTitle: `Portfolio de Jonathan-David Schröder`,
+    siteHeadline: `Jonathan-David Schröder - Portfolio`,
+    siteDescription: `Un portfolio de chocolat, 2D et 3D.`,
+    siteLanguage: `fr`,
+    siteImage: `/banner.jpg`,
+    siteUrl: `http://myselfhimself.github.io/portfolio`,
+    author: `@myselfhimself`
   },
   plugins: [
     {

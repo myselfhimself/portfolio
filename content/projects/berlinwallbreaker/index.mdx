@@ -1,0 +1,43 @@
+---
+cover: "./bwb_home.png"
+date: "2021-06-04"
+title: "Jeu vidéo BerlinWallBreaker"
+areas:
+  - Mondeville 
+---
+
+[JOUEZ À BERLINWALLBREAKER MAINTENANT DANS VOTRE NAVIGATEUR](https://myselfhimself.github.io/BerlinWallBreaker/)
+
+[DEPÔT DE CODE SUR GITHUB](https://github.com/myselfhimself/BerlinWallBreaker/)
+
+Imaginez-vous peindre en chocolat, découper des betteraves et des pommes, positionner vos coquilles Saint-Jacques du marché...
+...pour un jeudi-vidéo à base de stop motion, qui parle d'amitié et d'amour possiblement impossible.
+
+C'est ce que j'ai fait sur un peu plus d'un an depuis fin 2019 à Mondeville / Caen en Normandie.
+
+BerlinWallBreaker est un jeu à propos de ce que j'appelle les murs de Berlin (ou juste murs relationnels), comme ceux décrits dans la chanson [Bridges d'Emily Brimlow](https://www.youtube.com/watch?v=dF_GDww_WnY). Qu'est-ce qui peut casser les murs d'une amitié qui s'écroule du jour au lendemain ? Comment répondre à une violence, d'une personne qui a traîtée moins bien que ce qu'elle vous a fait vivre subitement ? Que faire quand, juste après, une maladie mortelle se déclare en vous, au point que vous perdiez vos moyens psychologiques pendant des mois ?
+
+Je n'en sais rien, mais j'ai fait ce jeu vidéo pour revenir sur deux villes de Normandie où ont vécu deux personnes.
+Au Havre et à Caen il y a des belles personnes, des belles choses naturelles. En parler, les toucher et manger, jouer avec, prendre une bonne centaine de photos, debout de haut sur une chaise... Cela n'explique rien, mais cela guérit un peu.
+
+BerlinWallBreaker s'inspire de ma contribution à [L'Envol de Samuel Yal](https://www.samuelyal.com/envol/) (dessin image par image en chocolat, du vol d'un oiseau), un court-métrage communautaire en période de COVID-19. Cette fois, le concept de nourriture animée est généralisé à la plupart des éléments graphiques d'un casse-brique sur trois niveau : fond d'écran fixe ; briques, balle animée et palette animées. 
+Le découpage de sprites issues de photographie reprend en beaucoup moins poussé un générateur de jeu à partir de dessins. Le designer qui en était l'auteur a un nom qui m'échappe, il visitait le [Fablab La Villette Makerz](https://villettemakerz.com/fablab-accueil/).
+
+## A propos des pizzas
+
+Elles ont été mangées pendant le tournage :)
+
+
+## Spécificités techniques du jeu
+
+
+- web avec vision extrêmement low-tech
+- certains sprites on demandé de cuisiner un peu (crêpes végan..)
+- extraction en batch des objets de premier plans avec un [script BASH + G'MIC CLI](https://github.com/myselfhimself/BerlinWallBreaker/blob/2de82a149c52694614cbdd3bf1d4ef3ad2805855/sprites/food/gmic_extract_foregrounds.bash) ouvrant une fenêtre interactive de pause de points
+- aucune base de données ni cookie, gestion de l'état du jeu par ancre dans l'URL, avec des mots clés opacifiés liés à la Normandie ("langueter", "livarot"...)
+- fait seulement avec des logiciels libres : Inkscape, Blender3d, GIMP, G'MIC
+- tourne sur un ordinateur vieux de 2010 (Thinkpad T400), photographié avec un smartphone de 2008 (Samsung Galaxy S)
+- utilisation des bibliothèques [p5.js](http://www.p5js.org/) (la version JavaScript du célèbre Processing) et [p5.play](http://molleindustria.github.io/p5.play/) (gestion facilitée de sprites et collisions)
+- écran d'accueil mélangeant 2D générative et petits modèles 3D, dont le logo fait avec BLionTaleFont
+- choix de la langue dès le premier écran
+- transitions entre niveaux en WebGL avec un pixel shader de particules animées grâce à une [technique sans multiplication polygonale de @Hamoid sur le forum Processing](https://discourse.processing.org/t/fragment-shader-too-many-uniforms-error/17603/15) et [textToPoints de p5js](https://p5js.org/reference/#/p5.Font/textToPoints)
